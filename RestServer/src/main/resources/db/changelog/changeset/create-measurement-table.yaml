@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-measurement
+      author: kayarilin
+      changes:
+        - createTable:
+            tableName: measurement
+            remarks: Показания
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: value
+                  type: double
+                  constraints:
+                    nullable: false
+              - column:
+                  name: raining
+                  type: boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: sensor_id
+                  type: integer
+                  constraints:
+                    nullable: false
+                    foreignKeyName: measurement_sensor_id_fk
+                    references: sensor(id)
+              - column:
+                  name: created_at
+                  type: timestamp
+                  defaultValue: now()
+                  constraints:
+                    nullable: false

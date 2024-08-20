@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-watchers
+      author: kayarilin
+      changes:
+        - createTable:
+            tableName: watchers
+            remarks: Ответственные
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(255)
+                  remarks: Фамилия
+                  constraints:
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(255)
+                  remarks: Имя
+                  constraints:
+                    nullable: false
+              - column:
+                  name: second_name
+                  type: varchar(255)
+                  remarks: Отчество
+                  constraints:
+                    nullable: true
+              - column:
+                  name: position
+                  type: varchar(255)
+                  remarks: Должность
+                  constraints:
+                    nullable: true

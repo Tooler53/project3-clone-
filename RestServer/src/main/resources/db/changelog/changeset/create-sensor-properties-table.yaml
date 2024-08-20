@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-sensor-properties
+      author: kayarilin
+      changes:
+        - createTable:
+            tableName: sensor_properties
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: model
+                  type: varchar(255)
+                  remarks: Модель
+                  constraints:
+                    nullable: false
+              - column:
+                  name: firmware_version
+                  type: varchar(30)
+                  remarks: Версия ПО
+                  constraints:
+                    nullable: false
+              - column:
+                  name: has_raining_sensor
+                  type: boolean
+                  remarks: Наличие датчика дождя
+                  constraints:
+                    nullable: false
