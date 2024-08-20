@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: alter-table-sensor-properties
+      author: kayarilin
+      changes:
+        - addColumn:
+            tableName: sensor_properties
+            columns:
+              - column:
+                  name: sensor_id
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: watcher_id
+                  type: integer
+                  constraints:
+                    nullable: false

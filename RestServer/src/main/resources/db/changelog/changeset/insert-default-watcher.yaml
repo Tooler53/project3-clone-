@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-default-watcher
+      author: kayarilin
+      changes:
+        - insert:
+            tableName: watchers
+            columns:
+              - column:
+                  name: last_name
+                  value: "admin"
+              - column:
+                  name: first_name
+                  value: "admin"
+              - column:
+                  name: position
+                  value: "general"

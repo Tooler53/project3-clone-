@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-sensors
+      author: kayarilin
+      changes:
+        - createTable:
+            tableName: sensor
+            remarks: Сенсор
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(30)
+                  remarks: Название
+                  constraints:
+                    unique: true
+                    nullable: false

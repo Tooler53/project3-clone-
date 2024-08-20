@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: update-default-watcher
+      author: kayarilin
+      changes:
+        - update:
+            tableName: watchers
+            columns:
+              - column:
+                  name: last_name
+                  value: "superadmin"
+            where: id=1

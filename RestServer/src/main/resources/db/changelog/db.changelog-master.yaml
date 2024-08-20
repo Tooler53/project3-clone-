@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/create-sensor-table.yaml
+  - include:
+      file: db/changelog/changeset/create-measurement-table.yaml
+  - include:
+      file: db/changelog/changeset/create-watchers-table.yaml
+  - include:
+      file: db/changelog/changeset/insert-default-watcher.yaml
+  - include:
+      file: db/changelog/changeset/update-default-watcher.yaml
+  - include:
+      file: db/changelog/changeset/create-sensor-properties-table.yaml
+  - include:
+      file: db/changelog/changeset/alter-table-sensor-properties-add-columns.yaml
+  - include:
+      file: db/changelog/changeset/alter-table-sensor-properties-add-foreign-keys.yaml
+
